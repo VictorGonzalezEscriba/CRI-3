@@ -1,0 +1,122 @@
+Reading file:FinalStemmedSentimentAnalysisDataset.csv
+
+===== Data =====
+- Total number of samples: 1564302
+- Number of attributes: 4
+
+- Percentage of positive tweets: 49.968
+- Percentage of negative tweets: 50.032
+
+===== Cleaning NaN values =====
+- Total number of samples: 1564280
+- Number of attributes 4
+
+- Percentage of positive tweets: 49.968
+- Percentage of negative tweets: 50.032
+
+===== Models =====
+- Naive bayes without removing stopwords:
+	Training model  ...	5.1364 seconds
+	Model prediction ...	5.0834 seconds
+	-----------------------------------------------
+	Total time: 10.2198 seconds
+	-----------------------------------------------
+	Accuracy: 73.448
+	TruePositives: 70.321	FalsePositives: 29.679
+	FalseNegatives: 22.316	TrueNegatives: 77.684
+
+- Naive bayes removing stopwords:
+	Training model  ...	5.3562 seconds
+	Model prediction ...	5.1323 seconds
+	-----------------------------------------------
+	Total time: 10.4885 seconds
+	-----------------------------------------------
+	Accuracy: 73.948
+	TruePositives: 72.654	FalsePositives: 27.346
+	FalseNegatives: 24.608	TrueNegatives: 75.392
+
+- Effect of train-test set size:
+
+	50.0-50.0:
+	Training model  ...	3.7444 seconds
+	Model prediction ...	8.7428 seconds
+	-----------------------------------------------
+	Total time: 12.487200000000001 seconds
+	-----------------------------------------------
+	Accuracy: 73.789
+	TruePositives: 72.502	FalsePositives: 27.498
+	FalseNegatives: 24.777	TrueNegatives: 75.223
+
+	60.0-40.0:
+	Training model  ...	4.4111 seconds
+	Model prediction ...	6.8529 seconds
+	-----------------------------------------------
+	Total time: 11.264 seconds
+	-----------------------------------------------
+	Accuracy: 73.901
+	TruePositives: 72.726	FalsePositives: 27.274
+	FalseNegatives: 24.795	TrueNegatives: 75.205
+
+	70.0-30.0:
+	Training model  ...	5.1802 seconds
+	Model prediction ...	5.3413 seconds
+	-----------------------------------------------
+	Total time: 10.5215 seconds
+	-----------------------------------------------
+	Accuracy: 73.844
+	TruePositives: 72.536	FalsePositives: 27.464
+	FalseNegatives: 24.698	TrueNegatives: 75.302
+
+	80.0-20.0:
+	Training model  ...	6.1491 seconds
+	Model prediction ...	3.3972 seconds
+	-----------------------------------------------
+	Total time: 9.5463 seconds
+	-----------------------------------------------
+	Accuracy: 73.986
+	TruePositives: 72.713	FalsePositives: 27.287
+	FalseNegatives: 24.591	TrueNegatives: 75.409
+
+- Changing the size of dictionaries with K-fold K = 5.
+
+	500 words:
+	Calculating ...	51.2294 seconds
+	Accuracy: 71.034
+	TruePositives: 69.006	FalsePositives: 30.994
+	FalseNegatives: 26.46	TrueNegatives: 73.54
+
+	2000 words:
+	Calculating ...	50.3396 seconds
+	Accuracy: 73.609
+	TruePositives: 72.202	FalsePositives: 27.798
+	FalseNegatives: 24.799	TrueNegatives: 75.201
+
+	3500 words:
+	Calculating ...	51.4553 seconds
+	Accuracy: 74.473
+	TruePositives: 73.381	FalsePositives: 26.619
+	FalseNegatives: 24.331	TrueNegatives: 75.669
+
+	5000 words:
+	Calculating ...	51.7528 seconds
+	Accuracy: 74.918
+	TruePositives: 74.077	FalsePositives: 25.923
+	FalseNegatives: 24.183	TrueNegatives: 75.817
+
+	6500 words:
+	Calculating ...	52.582 seconds
+	Accuracy: 75.174
+	TruePositives: 74.371	FalsePositives: 25.629
+	FalseNegatives: 23.97	TrueNegatives: 76.03
+
+	8000 words:
+	Calculating ...	49.9348 seconds
+	Accuracy: 75.346
+	TruePositives: 74.61	FalsePositives: 25.39
+	FalseNegatives: 23.875	TrueNegatives: 76.125
+
+	All words:
+	Calculating ...	52.499 seconds
+	Accuracy: 76.471
+	TruePositives: 77.91	FalsePositives: 22.09
+	FalseNegatives: 24.825	TrueNegatives: 75.175
