@@ -1,12 +1,11 @@
 import numpy as np
 from nltk.corpus import stopwords
-from autocorrect import Speller
 from operator import itemgetter
 words = set(stopwords.words('english'))
 
 
 class NaiveBayes:
-    def __init__(self, n_words, stop=False, correct=False):
+    def __init__(self, n_words, stop=False):
         # Probability of positive message
         self.p_prob = 0
         # Probability of negative message
@@ -27,10 +26,7 @@ class NaiveBayes:
         self.laplace = 1
         # Use stopwords or not
         self.stop = stop
-        # To correct the words or not
-        self.correct = correct
-        # To correct the words
-        self.speller = Speller(lang='en')
+
 
     def stop_words(self):
         for word in words:
